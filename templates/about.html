@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-        <title>HomePage {{title}}</title>
-    {% else%}
-        <title>HomePage Default</title>
-    {% endif%}
-    <title>TextSum HomePage</title>
-
-</head>
-<body>
-    <h1>TextSum homepage</h1>
-    {% for d in data %}
-        <h2>name {{d.name}}</h2>
-        <h2>from {{d.hometown}}</h2>
-    {% endfor %}
-</body>
-</html>
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>About page of textsum</h1>
+{% endblock content %}

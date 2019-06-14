@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'layout.html' %}
+{% block content %}
+    <div class='content-section'>
+        <form method="POST" action="">
+            {{form.hidden_tag() }}
+            <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Text Summarizer</legend>
+                    <div class="form-group" style="height:1200%">
+                        {{form.textInput.label(class='form-control-label-lb')}}
+                        {{form.textInput(class='form-control')}}
+                    </div>
+            </fieldset>
+            <div class="form-group">
+                {{form.submit(class = 'btn btn-outline-info') }}
+            </div>
+        </form>
+    </div>
+
+    <div class="text-wrap" style="width:auto;">
+        <p>{{output }}</p>
+    </div>
+{% endblock content %}
